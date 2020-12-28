@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class ExercicioFixacaoCap6 {
+public class ExercicioFixacaoCap6While {
     static class exercicio1 {
         public static void main(String[] args) {
 
