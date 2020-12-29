@@ -104,14 +104,37 @@ public class ExercicioFixacaoCap6For {
             System.out.printf("Digite o fatorial que deseja saber: ");
             int n = ale.nextInt();
 
-            for (int i = 0; i < n; i++) {
-                if (n==0){
-                    System.out.println("Fatorial = 1.");
-                } else{
-                    n = n*(n-i);
+            System.out.println("Fatorial é: " + calculoFatorial(n));
+        }
+
+        private static int calculoFatorial(int n) {
+            int x = 1;
+
+            if (n != 0) {
+
+                for (int i = 1; i < n; i++) {
+                    if (i == 1) {
+                        x = n * (n - i);
+                    } else {
+                        x = x * (n - i);
+                    }
                 }
             }
-            System.out.println("Fatorial é: "+n);
+            return x;
         }
-    }//falta resolver
+    }
+    static class exercicio6{
+        public static void main(String[] args){
+
+            Scanner ale = new Scanner(System.in);
+
+            int x = ale.nextInt();
+
+            int y = 0;
+
+            for (int i=x; i > y; i-- ){
+
+            }
+        }
+    }//continuar amanhã
 }
