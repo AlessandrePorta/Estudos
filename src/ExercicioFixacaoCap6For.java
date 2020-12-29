@@ -123,18 +123,44 @@ public class ExercicioFixacaoCap6For {
             return x;
         }
     }
-    static class exercicio6{
-        public static void main(String[] args){
+
+    static class exercicio6 {
+        public static void main(String[] args) {
 
             Scanner ale = new Scanner(System.in);
 
+            System.out.println("Digite o valor que deseja saber a divisao: ");
             int x = ale.nextInt();
 
             int y = 0;
+            int divisao;
 
-            for (int i=x; i > y; i-- ){
-
+            for (int i = x; i > y; i--) {
+                divisao = x / i;
+                if (x % i == 0) {
+                    System.out.println("Valor: " + divisao);
+                }
             }
         }
-    }//continuar amanhã
+    }
+
+    static class exercicio7 {
+        public static void main(String[] args) {
+
+            Scanner ale = new Scanner(System.in);
+
+            System.out.printf("Digite o número de linhas: ");
+            int x = ale.nextInt();
+
+            int y = 0;
+            int z = 0;
+
+
+            for (int i = 1; i <= x; i++){
+                y = (int) Math.pow(i,2);
+                z = (int) Math.pow(i,3);
+                System.out.println("número: "+i +" elevado a 2: "+ y +" elevado a 3: "+ z);
+            }
+        }
+    }
 }
