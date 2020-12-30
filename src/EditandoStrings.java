@@ -1,6 +1,7 @@
 import java.util.Locale;
-/*
-public class FunçõeString {
+
+public class EditandoStrings {
+    /*
     static class teoria {
     public static void main(String[] args) {
 
@@ -38,17 +39,18 @@ public class FunçõeString {
             String b = teste.toUpperCase();
             String c = teste.trim();
             String d = teste.substring(2);
-            String e = teste.substring(2,9);
-            String f = teste.replace('h','a');
-            String g = teste.replace('s','a');
-            int h  = teste.indexOf("ah");
+            String e = teste.substring(2, 9);
+            String f = teste.replace('h', 'a');
+            String g = teste.replace('s', 'a');
+            int h = teste.indexOf("ah");
             int i = teste.lastIndexOf("a");
 
-            System.out.println("Sem edição:"+a+"\n"+ b+"\n"+ "trim (sem espaçamento)"+c+"\nsubs: "+d+"\nsubs def: " +e+"\nreplace: " +f+"\nreplace: " +g+"\nposição da letra: " +h+"\nultima posicao da letra: " +i);
+            System.out.println("Sem edição:" + a + "\n" + b + "\n" + "trim (sem espaçamento)" + c + "\nsubs: " + d + "\nsubs def: " + e + "\nreplace: " + f + "\nreplace: " + g + "\nposição da letra: " + h + "\nultima posicao da letra: " + i);
         }
     }
-    static class teste2{
-        public static void main(String[] args){
+
+    static class teste2 {
+        public static void main(String[] args) {
             String a = "Como deve ser";
             String[] vect = a.split("");
             String b = vect[0];

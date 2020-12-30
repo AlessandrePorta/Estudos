@@ -12,6 +12,7 @@ public class Funções {
 
         int maior = max(a, b, c);
 
+        showResult(maior);
     }
 
     public static int max(int x, int y, int z) {
@@ -23,6 +24,9 @@ public class Funções {
         } else {
             res = z;
         }
-
+        return res;
+    }
+    public static void showResult(int resultado){
+        System.out.println("Maior= "+ resultado);
     }
 }
