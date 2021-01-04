@@ -1,4 +1,4 @@
-package InicioOri_a_Obj;
+package PrimeiroProblema;
 
 class triangulo {
 

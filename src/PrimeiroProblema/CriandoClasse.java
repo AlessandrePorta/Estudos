@@ -1,4 +1,4 @@
-package InicioOri_a_Obj;
+package PrimeiroProblema;
 
 import java.util.Locale;
 import java.util.Scanner;
