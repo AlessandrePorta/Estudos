@@ -1,5 +1,7 @@
-import java.util.Scanner;
+package InicioOri_a_Obj;
+
 import java.util.Locale;
+import java.util.Scanner;
 
 public class CriandoClasse {
     public static void main(String[] args) {
@@ -34,12 +36,5 @@ public class CriandoClasse {
         } else{
             System.out.println("Área maior: B");
         }
-    }
-
-    public static class triangulo {
-
-        public double x;
-        public double y;
-        public double z;
     }
 }

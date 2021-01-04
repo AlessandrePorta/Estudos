@@ -14,7 +14,7 @@ public class While {
 
             while (x < y) {
                 x += 1;
-                System.out.println("Teste" + x);
+                System.out.println("InicioOri_a_Obj" + x);
             }
         }
 
