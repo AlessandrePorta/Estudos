@@ -5,7 +5,6 @@ public class DadosFuncionario {
     String nome;
     double salario;
     double taxa;
-    double taxa1;
 
     public double salario(){
         return salario - taxa;

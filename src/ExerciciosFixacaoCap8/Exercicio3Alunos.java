@@ -17,10 +17,6 @@ public class Exercicio3Alunos {
         a._2trimestre = ale.nextDouble();
         a._3trimestre = ale.nextDouble();
 
-        if ( <= 60) {
-            System.out.println(a+"\n"+"Passou!");
-        } else{
-            System.out.println(a+"%n"+"Reprovado."+"%n"+"Faltando "+ );
-        }
+        System.out.println(a);
     }
 }
