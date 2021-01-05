@@ -21,5 +21,19 @@ public class Inicio {
 
         System.out.println("Dados do produto: "+ loja);
 
+        System.out.println();
+        System.out.print("Digite a quantidade que deseja adicionar no estoque: ");
+        int quantidade = ale.nextInt();
+        loja.adicionandoProdutos(quantidade);
+
+        System.out.println("Estoque atualizado: "+ loja);
+
+        System.out.println();
+        System.out.print("Digite a quantidade que deseja remover no estoque: ");
+        quantidade = ale.nextInt();
+        loja.removendoProdutos(quantidade);
+
+        System.out.println("Estoque atualizado: "+ loja);
+
     }
 }
