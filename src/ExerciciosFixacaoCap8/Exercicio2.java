@@ -20,8 +20,8 @@ public class Exercicio2 {
 
         System.out.println();
         System.out.print("Digite a porcentagem de aumento de salario: ");
-        double taxa1 = ale.nextDouble();
-        r.aumento();
+        double salario = ale.nextDouble();
+        r.aumento(salario);
 
         System.out.println(r);
     }

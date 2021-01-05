@@ -12,8 +12,8 @@ public class DadosFuncionario {
     }
 
     public void aumento(double salario){
-        this.salario += (salario*taxa1)/100;
-    }//PAREI AQUI
+        this.salario += (this.salario*salario)/100;
+    }
 
     public String toString(){
         return "Empregado: "+ nome+", " + salario();
