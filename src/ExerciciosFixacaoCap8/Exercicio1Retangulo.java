@@ -3,7 +3,7 @@ package ExerciciosFixacaoCap8;
 import java.util.Scanner;
 import java.util.Locale;
 
-public class Exercicio1 {
+public class Exercicio1Retangulo {
     public static void main(String[] args){
 
         Locale.setDefault(Locale.US);
