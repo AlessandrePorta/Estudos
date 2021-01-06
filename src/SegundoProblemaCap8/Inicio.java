@@ -1,4 +1,4 @@
-package SegundoProblema;
+package SegundoProblemaCap8;
 
 import java.util.Scanner;
 import java.util.Locale;

@@ -1,4 +1,4 @@
-package estudosantigos;
+package _1.PastaDeEstudos;
 
 public class Operacoes {
     public static void main(String[] args){

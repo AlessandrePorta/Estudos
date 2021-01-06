@@ -1,4 +1,4 @@
-package PrimeiroProblema;
+package PrimeiroProblemaCap8;
 
 class triangulo {
 

@@ -1,7 +1,4 @@
-package estudosantigos;
-
-import java.util.Locale;
-import java.util.Scanner;
+package _1.PastaDeEstudos;
 
 public class TreinoScanner {
     public static void main(String[] args){

@@ -1,4 +1,4 @@
-package estudosantigos;
+package _1.PastaDeEstudos;
 
 public class DelimitandoCasas {
     public static void main(String[] args) {

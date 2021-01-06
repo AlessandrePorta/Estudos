@@ -1,6 +1,4 @@
-package estudosantigos;
-
-import java.util.Locale;
+package _1.PastaDeEstudos;
 
 public class EditandoStrings {
     /*

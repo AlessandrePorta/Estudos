@@ -1,4 +1,4 @@
-package estudosantigos;
+package _1.PastaDeEstudos;
 
 import java.util.Scanner;
 

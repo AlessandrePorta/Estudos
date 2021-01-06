@@ -1,4 +1,4 @@
-package estudosantigos;
+package _1.PastaDeEstudos;
 
 import java.util.Scanner;
 
@@ -16,7 +16,7 @@ public class While {
 
             while (x < y) {
                 x += 1;
-                System.out.println("PrimeiroProblema" + x);
+                System.out.println("PrimeiroProblemaCap8" + x);
             }
         }
 

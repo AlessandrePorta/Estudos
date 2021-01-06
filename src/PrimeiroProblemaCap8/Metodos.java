@@ -1,9 +1,9 @@
-package PrimeiroProblema;
+package PrimeiroProblemaCap8;
 
-import java.util.Locale;
 import java.util.Scanner;
+import java.util.Locale;
 
-public class CriandoClasse {
+public class Metodos {
     public static void main(String[] args) {
 
         Locale.setDefault(Locale.US);
@@ -22,11 +22,8 @@ public class CriandoClasse {
         b.y = ale.nextDouble();
         b.z = ale.nextDouble();
 
-        double p = (a.x + a.y + a.z) / 2.0;
-        double areaA = Math.sqrt(p * (p - a.x) * (p - a.y) * (p - a.z));
-
-        p = (b.x + b.y + b.z) / 2.0;
-        double areaB = Math.sqrt(p * (p - b.x) * (p - b.y) * (p - b.z));
+        double areaA = a.area();
+        double areaB = b.area();
 
         System.out.printf("Area do triangulo A: %.4f%n", areaA);
         System.out.printf("Area do triangulo B: %.4f%n", areaB);
