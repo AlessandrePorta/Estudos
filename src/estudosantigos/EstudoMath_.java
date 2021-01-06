@@ -1,3 +1,5 @@
+package estudosantigos;
+
 public class EstudoMath_ {
     public static void main(String[] args){
 

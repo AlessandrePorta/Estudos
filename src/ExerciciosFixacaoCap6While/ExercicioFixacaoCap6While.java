@@ -1,3 +1,5 @@
+package ExerciciosFixacaoCap6While;
+
 import java.util.Scanner;
 
 public class ExercicioFixacaoCap6While {

@@ -1,3 +1,5 @@
+package estudosantigos;
+
 import java.util.Locale;
 
 public class EditandoStrings {

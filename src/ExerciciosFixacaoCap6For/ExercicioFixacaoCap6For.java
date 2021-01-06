@@ -1,3 +1,5 @@
+package ExerciciosFixacaoCap6For;
+
 import java.util.Scanner;
 
 public class ExercicioFixacaoCap6For {

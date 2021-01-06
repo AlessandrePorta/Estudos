@@ -1,3 +1,5 @@
+package estudosantigos;
+
 public class DelimitandoCasas {
     public static void main(String[] args) {
         //Para imprimir quantidade de decimais especificas

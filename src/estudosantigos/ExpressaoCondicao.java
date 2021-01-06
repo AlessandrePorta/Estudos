@@ -1,3 +1,5 @@
+package estudosantigos;
+
 public class ExpressaoCondicao {
     public static void main(String[] args){
         String b = "cachorroQuente";
