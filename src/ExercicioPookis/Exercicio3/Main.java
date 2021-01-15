@@ -13,7 +13,7 @@ public class Main {
 
         int[] listaDeNumeros = lista.getLista();
 
-        for (int posicao = 0; posicao < 10; posicao++) {
+        for (int posicao = 0; posicao < listaDeNumeros.length; posicao++) {
 
             int posicaoZero = listaDeNumeros[posicao];
             int validacao = posicaoZero % 2;

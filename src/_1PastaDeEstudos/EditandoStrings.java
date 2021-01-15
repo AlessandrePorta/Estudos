@@ -57,7 +57,7 @@ public class EditandoStrings {
             String c = vect[1];
             String d = vect[2];
 
-            System.out.println(d);
+            System.out.println(b);
         }
     }
 }
