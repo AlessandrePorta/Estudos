@@ -1,4 +1,4 @@
-package _1.PastaDeEstudos;
+package _1PastaDeEstudos;
 
 public class EstudoMath_ {
     public static void main(String[] args){

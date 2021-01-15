@@ -1,4 +1,4 @@
-package _1.PastaDeEstudos;
+package _1PastaDeEstudos;
 
 public class HelloWorld {
     //Comando para criar a classe principal

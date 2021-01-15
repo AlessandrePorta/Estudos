@@ -1,8 +1,8 @@
-package ExercicioPookis;
+package ExercicioPookis.Exercicio1;
 
 import java.util.Locale;
 
-public class Lista {
+public class Main {
     public static void main(String[] args){
 
         Locale.setDefault(Locale.US);

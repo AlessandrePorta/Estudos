@@ -1,4 +1,4 @@
-package _1.PastaDeEstudos;
+package _1PastaDeEstudos;
 
 public class PadraoPessoa {
     private String nome;

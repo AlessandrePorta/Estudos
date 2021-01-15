@@ -1,4 +1,4 @@
-package ExercicioPookis;
+package ExercicioPookis.Exercicio1;
 
 public class ClasseLista {
 
