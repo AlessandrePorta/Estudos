@@ -14,10 +14,21 @@ public class Main {
         int[] listaDeNumeros = lista.getListaRandomica();
 
         //Pegar o ListaRandomica, copiar para outra lista de um jeito ordenado e printar a lista ordenada.
+        int z = 0;
 
+        for (int posicao = 0; posicao <= listaDeNumeros.length; posicao++) {
+            int x = listaDeNumeros[posicao];
+            int y = listaDeNumeros[posicao + 1];
+            if (z < y) {
+                z = y;
+            } else if (z < x){
+                z = x;
+            }
+            System.out.println(z);
+        }
     }
-
 }
+
 
 
 
