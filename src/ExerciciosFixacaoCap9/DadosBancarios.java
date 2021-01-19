@@ -1,27 +1,43 @@
 package ExerciciosFixacaoCap9;
+
 //NÃO FINALIZADO.
 public class DadosBancarios {
 
     String nomeDaConta;
     int numeroDaConta;
     double valor;
-    char validacao;
+    boolean validacao;
+    char validandoSouN;
 
-    public DadosBancarios(String nomeDaConta, int numeroDaConta, double valor, char validacao) {
+    public DadosBancarios(String nomeDaConta, int numeroDaConta, double valor, boolean validacao) {
         this.nomeDaConta = nomeDaConta;
         this.numeroDaConta = numeroDaConta;
         this.valor = valor;
         this.validacao = validacao;
     }
-    public void adicionandoDepositos(double valor){
-        if (validacao == 's' || validacao == 'S'){
-            this.valor += valor;
-        } else if (validacao == 'n' || validacao == 'N') {
-            this.valor += valor;
+
+    public double Deposito() {
+        return valor += valor;
+    }
+
+    public void Validacao(boolean validacao) {
+        if (validandoSouN == 's') {
+            validacao = true;
+        } else {
+            validacao = false;
         }
     }
 
+    public void adicionandoCreditos(double valor) {
+        this.valor = valor;
+    }
+
+    public void removendoCreditos(double valor) {
+        this.valor -= valor;
+    }
+
+
     public String toString() {
-        return "Número da conta: "+ numeroDaConta + ", Dono da Conta: " + nomeDaConta + ", Saldo: " + String.format("%.2f", adicionandoDepositos());
+        return "Número da conta: " + numeroDaConta + ", Dono da Conta: " + nomeDaConta + ", Saldo: " + String.format("%.2f", Deposito());
     }
 }
