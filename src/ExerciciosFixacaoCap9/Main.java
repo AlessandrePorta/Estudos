@@ -27,22 +27,30 @@ public class Main {
         }
         DadosBancarios conta = new DadosBancarios(nomeDaConta, numeroDaConta, valor, validacao, validandoSouN);
 
+        System.out.println(conta);
+
         System.out.println();
         System.out.println("Deseja adicionar algum valor?s/n");
         validandoSouN = scanner.next().charAt(0);
         conta.Validacao(validandoSouN);
-        if (validacao = true) {
+        if (validandoSouN == 's' || validandoSouN == 'S') {
+            System.out.println("Entre o valor do deposito: ");
+            valor = scanner.nextDouble();
             conta.adicionandoCreditos(valor);
         }
-        System.out.println("Data de alteração:");
+        System.out.println("Data de alteração: ");
         System.out.println("Digite o valor que deseja adicionar: ");
-        conta.adicionandoCreditos(valor);
+
+
+        System.out.println(conta);
 
         System.out.println();
         System.out.println("Deseja remover algum valor?s/n");
         validandoSouN = scanner.next().charAt(0);
         conta.Validacao(validandoSouN);
-        if (validacao = true) {
+        if (validandoSouN == 's' || validandoSouN == 'S') {
+            System.out.println("Entre o valor que deseja retirar: ");
+            valor = scanner.nextDouble();
             conta.removendoCreditos(valor);
         }
         System.out.println(conta);

@@ -18,7 +18,7 @@ public class DadosBancarios {
     }
 
     public double Deposito() {
-        return valor += valor;
+        return valor = valor;
     }
 
     public void Validacao(char validandoSouN) {
