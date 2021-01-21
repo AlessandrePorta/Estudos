@@ -4,55 +4,45 @@ import java.util.Locale;
 import java.util.Scanner;
 
 public class Main {
+
+    public static Controladora controladora = new Controladora();
+
     public static void main(String[] args) {
 
         Scanner scanner = new Scanner(System.in);
         Locale.setDefault(Locale.US);
 
-        double valor;
-        char validandoSouN;
-        boolean validacao = false;
+        int opcao = 0;
 
-        System.out.println("Digite sua conta bancaria: ");
-        int numeroDaConta = scanner.nextInt();
-        System.out.println("Digite o nome do dono da conta: ");
-        String nomeDaConta = scanner.next();
-        System.out.println("Há algum deposito inicial?s/n ");
-        validandoSouN = scanner.next().charAt(0);
-        if (validandoSouN == 's' || validandoSouN == 'S') {
-            System.out.println("Entre o valor do deposito inicial: ");
-            valor = scanner.nextDouble();
-        } else {
-            valor = 0;
+        do {
+            mostrarMenu();
+            opcao = scanner.nextInt();
+            funcionalidadeDoMenu(opcao);
+        } while (opcao != 4);
+    }
+
+    public static void mostrarMenu() {
+        System.out.println("Digite '0' para criar conta. ");
+        System.out.println("Digite '1' para saber o saldo. ");
+        System.out.println("Digite '2' para adicionar saldo. ");
+        System.out.println("Digite '3' para remover saldo. ");
+        System.out.println("Digite '4' para sair. ");
+    }
+
+    public static void funcionalidadeDoMenu(int opcao) {
+        switch (opcao) {
+            case 0:
+                controladora.criarConta();
+                break;
+            case 1:
+                controladora.consultaSaldo();
+                break;
+            case 2:
+                controladora.adicionaSaldo();
+                break;
+            case 3:
+                controladora.removeSaldo();
+                break;
         }
-        DadosBancarios conta = new DadosBancarios(nomeDaConta, numeroDaConta, valor, validacao, validandoSouN);
-
-        System.out.println(conta);
-
-        System.out.println();
-        System.out.println("Deseja adicionar algum valor?s/n");
-        validandoSouN = scanner.next().charAt(0);
-        conta.Validacao(validandoSouN);
-        if (validandoSouN == 's' || validandoSouN == 'S') {
-            System.out.println("Entre o valor do deposito: ");
-            valor = scanner.nextDouble();
-            conta.adicionandoCreditos(valor);
-        }
-        System.out.println("Data de alteração: ");
-        System.out.println("Digite o valor que deseja adicionar: ");
-
-
-        System.out.println(conta);
-
-        System.out.println();
-        System.out.println("Deseja remover algum valor?s/n");
-        validandoSouN = scanner.next().charAt(0);
-        conta.Validacao(validandoSouN);
-        if (validandoSouN == 's' || validandoSouN == 'S') {
-            System.out.println("Entre o valor que deseja retirar: ");
-            valor = scanner.nextDouble();
-            conta.removendoCreditos(valor);
-        }
-        System.out.println(conta);
     }
 }
