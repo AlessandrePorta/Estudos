@@ -10,7 +10,6 @@ public class ClasseLista {
     }
 
     public int[] getListaRandomica() {
-
         return listaRandomica;
     }
 }

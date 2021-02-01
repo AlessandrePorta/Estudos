@@ -6,26 +6,17 @@ import java.util.Scanner;
 public class Exercicio1 {
     public static void main(String[] args) {
 
-        Locale.setDefault(Locale.US);
         Scanner scanner = new Scanner(System.in);
+        Locale.setDefault(Locale.US);
 
-        System.out.println("Quantos quartos serão alugados?");
+        Dados lista = new Dados();
+
+        System.out.println("Quantos quartos deseja alugar?");
         int n = scanner.nextInt();
-        Dados[] vetor = new Dados[10];
 
-        for (int i = 1; i <= n; i++) {
+        for (int i = 0; i < n; i++) {
 
-            for ( i = 1; i <= n; i++) {
-                scanner.nextLine();
-                System.out.println("Digite seu nome: ");
-                String nome = scanner.nextLine();
-                System.out.println("Digite o seu email: ");
-                String email = scanner.nextLine();
-                System.out.println("Digite o quarto que deseja alugar: ");
-                int quarto = scanner.nextInt();
-                vetor[quarto] = new Dados(nome, email, quarto);
-            }
         }
     }
 }
-}
+
