@@ -15,7 +15,7 @@ public class ExercicioExemplo2vetor {
         int n = scanner.nextInt();
         ProdutosExercicio2[] vetor = new ProdutosExercicio2[n];
 
-        for (int i = 0; i<n; i++ ){
+        for (int i = 0; i<vetor.length; i++ ){
             scanner.nextLine();
             System.out.println("Digite o nome: ");
             String nome = scanner.nextLine();
@@ -24,7 +24,7 @@ public class ExercicioExemplo2vetor {
             vetor[i] = new ProdutosExercicio2(nome, preco);
         }
         double soma = 0;
-        for(int i = 0; i<n; i++){
+        for(int i = 0; i<vetor.length; i++){
             soma += vetor[i].getPreco();
         }
         double media = soma/n;
