@@ -4,7 +4,6 @@ public class Dados {
 
     String nome;
     String email;
-    int quarto;
 
     public Dados(String nome, String email) {
         this.nome = nome;
