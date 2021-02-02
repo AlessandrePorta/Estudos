@@ -1,7 +1,19 @@
 package ExercicioFixacaoCap10;
 
-public class Dados {
-    int[] quartos = {1,2,3,4,5,6,7,8,9,10};
+import java.util.Scanner;
 
+public class Dados {
+
+    Scanner scanner = new Scanner(System.in);
+
+    String nome;
+    String email;
+    int quartos;
+    Dados cadastro = null;
+
+    public Dados(String nome, String email) {
+        this.nome = nome;
+        this.email = email;
+    }
 
 }
