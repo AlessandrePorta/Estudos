@@ -34,8 +34,7 @@ public class Main {
         System.out.println("Digite o ID do funcionario que deseja aumentar o salario:");
         Integer x = scanner.nextInt();
 
-        for (x:
-             lista) {
+        for (x : lista) {
 
         }
 
