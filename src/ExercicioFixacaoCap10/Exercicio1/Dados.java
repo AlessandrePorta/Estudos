@@ -1,4 +1,4 @@
-package ExercicioFixacaoCap10;
+package ExercicioFixacaoCap10.Exercicio1;
 
 public class Dados {
 
