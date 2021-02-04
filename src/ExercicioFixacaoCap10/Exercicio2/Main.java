@@ -21,17 +21,31 @@ public class Main {
             System.out.println("Qual será o ID do empregado " + i + " ?");
             scanner.nextLine();
             Integer id = scanner.nextInt();
-            lista.indexOf(id);
+            while(seuId(lista, id)){
+                System.out.println("ID já está sendo usado. Digite outro: ");
+                id = scanner.nextInt();
+            }
             System.out.println("Digite o nome do empregado: " + i);
             scanner.nextLine();
             String nome = scanner.nextLine();
             System.out.println("Digite o salario do empregado: " + i);
             Double salario = scanner.nextDouble();
-            Dados empregados = new Dados(nome, salario);
+            Dados empregados = new Dados(id, nome, salario);
         }
 
         System.out.println("Qual o ID do funcionario que deseja aumentar o salario: ");
-        int x = scanner.nextInt();
+        int id = scanner.nextInt();
+        Dados Ids = lista.stream().filter(x -> x.getId() == id).findFirst().orElse(null);
+        if (Ids == null){
+            System.out.println("Esse Id não existe");
+        }
+        else{
+            System.out.println("Digite a porcentagem:");
+            double porcentagem = scanner.nextDouble();
+            Ids.aumentoEmpregado(porcentagem);
+        }
+
+
 
         System.out.println("Lista de empregados:");
         for (int i = 0; i < empregado>; i++) {
@@ -39,5 +53,9 @@ public class Main {
                 System.out.println(lista.get(i));
             }
         }
+    }
+    public static boolean seuId(List<Dados> lista, int id){
+        Dados Ids = lista.stream().filter(x -> x.getId() == id).findFirst().orElse(null);
+        return Ids != null;
     }
 }
