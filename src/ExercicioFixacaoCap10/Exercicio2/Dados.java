@@ -2,12 +2,10 @@ package ExercicioFixacaoCap10.Exercicio2;
 
 public class Dados {
 
-    int id;
-    String nome;
-    double salario;
+    private String nome;
+    private double salario;
 
-    public Dados(int id, String nome, double salario) {
-        this.id = id;
+    public Dados(String nome, double salario) {
         this.nome = nome;
         this.salario = salario;
     }
@@ -28,17 +26,11 @@ public class Dados {
         this.salario = salario;
     }
 
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
+    public static void aumentoEmpregado (double salario){
+        salario += (salario * 10) / 100;
     }
 
     public String toString() {
-        return + id + ", " + nome + ", " + salario;
+        return ", " + nome + ", " + salario;
     }
-
-
 }

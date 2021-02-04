@@ -11,37 +11,32 @@ public class Main {
         Scanner scanner = new Scanner(System.in);
         Locale.setDefault(Locale.US);
 
-        List<Dados[]> lista = new ArrayList<>();
-        Dados[] list = new Dados[10];
+        List<Dados> lista = new ArrayList<>();
 
         System.out.println("Quantas pessoas serão empregadas?");
-        int empregados = scanner.nextInt();
+        int empregado = scanner.nextInt();
 
-        for (int i = 0; i < empregados; i++) {
+        for (int i = 0; i < empregado; i++) {
             System.out.println("Empregado - " + i);
             System.out.println("Qual será o ID do empregado " + i + " ?");
             scanner.nextLine();
-            int id = scanner.nextInt();
+            Integer id = scanner.nextInt();
+            lista.indexOf(id);
             System.out.println("Digite o nome do empregado: " + i);
             scanner.nextLine();
             String nome = scanner.nextLine();
             System.out.println("Digite o salario do empregado: " + i);
-            double salario = scanner.nextDouble();
-            list[i] = new Dados(id, nome, salario);
-            lista.add(i, list);
+            Double salario = scanner.nextDouble();
+            Dados empregados = new Dados(nome, salario);
         }
 
-        System.out.println("Digite o ID do funcionario que deseja aumentar o salario:");
-        Integer x = scanner.nextInt();
-
-        for (x : lista) {
-
-        }
+        System.out.println("Qual o ID do funcionario que deseja aumentar o salario: ");
+        int x = scanner.nextInt();
 
         System.out.println("Lista de empregados:");
-        for (int i = 0; i < 10; i++) {
-            if (list[i] != null) {
-                System.out.println(list[i]);
+        for (int i = 0; i < empregado>; i++) {
+            if (lista.get(i) != null) {
+                System.out.println(lista.get(i));
             }
         }
     }
