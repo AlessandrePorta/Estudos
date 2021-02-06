@@ -12,8 +12,9 @@ public class Main {
         Matriz matriz = new Matriz();
         int[][] lista = matriz.getMatriz();
 
-        for (int posicao1 = 0; posicao1 <= lista.length - 1; posicao1++) {
-            for (int posicao2 = 0; posicao2 <= lista[0].length - 1; posicao2++) {
+
+        for (int posicao2 = 0; posicao2 <= lista[0].length - 1; posicao2++) {
+            for (int posicao1 = 0; posicao1 <= lista.length - 1; posicao1++) {
                 for (int coluna = 0; coluna <= lista.length - 1; coluna++) {
                     for (int linha = 0; linha <= lista[0].length - 1; linha++) {
                         int aux = lista[coluna][linha];
