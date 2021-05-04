@@ -6,7 +6,6 @@ import java.util.Locale;
 
 public class Main {
     public static void main(String[] args) {
-a
         Locale.setDefault(Locale.US);
 
         Matriz matriz = new Matriz();
