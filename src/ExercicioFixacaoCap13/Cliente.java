@@ -55,4 +55,9 @@ public class Cliente {
     public void setStatus(statusOrdem status) {
         this.status = status;
     }
+
+    public String toString(){
+        return "Cliente: "+ nome + "("+dataDeNascimento+")"+" - "+ email;
+    }
+
 }

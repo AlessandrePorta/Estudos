@@ -6,7 +6,6 @@ public class itens extends pedidoProduto {
     private Double preco;
     private Integer quantidade;
 
-
     public itens(String nomeProduto, Double preco, Integer quantidade) {
         this.nomeProduto = nomeProduto;
         this.preco = preco;
@@ -37,8 +36,13 @@ public class itens extends pedidoProduto {
         this.quantidade = quantidade;
     }
 
-    public Double total() {
-        return quantidade * preco;
+    public String total(){
+        double total1 = preco;
+        for (int i = 0; i<quantidade; i++){
+            total1 += preco;
+        }
+        return "Subtotal: " + total1;
     }
+
 
 }

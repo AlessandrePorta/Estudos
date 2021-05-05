@@ -1,10 +1,7 @@
 package ExercicioFixacaoCap13;
 
-import org.w3c.dom.ls.LSOutput;
-
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
-import java.time.LocalDateTime;
 import java.util.Date;
 import java.util.Locale;
 import java.util.Scanner;
@@ -35,6 +32,8 @@ public class Pedido {
         System.out.println("Quantos itens terá o pedido?");
         int n = sc.nextInt();
 
+        itens produto = null;
+
         for (int i = 0; i < n; i++){
             System.out.println("Entre com os dados do #"+ (i+1) +" item");
             sc.nextLine();
@@ -44,13 +43,17 @@ public class Pedido {
             Double preco = sc.nextDouble();
             System.out.print("Quantidade: ");
             Integer quantidade = sc.nextInt();
-            itens produto = new itens(nomeProduto, preco, quantidade);
+            produto = new itens(nomeProduto, preco, quantidade);
             pedidoProduto.addContrato(produto);
         }
 
         System.out.println("RESUMO DO PEDIDO:");
-        System.out.print("DATA: "+ sdf1.format(date));
-        System.out.print("Status do pedido: "+ status);
+        System.out.print("DATA: "+ sdf1.format(date)+ "\n");
+        System.out.print("Status do pedido: "+ status+ "\n");
         System.out.print(cliente);
+        System.out.println("Itens do pedido:");
+        for(itens item : produto.getProdutos()){
+            System.out.println(item.toString());
+        }
     }
 }

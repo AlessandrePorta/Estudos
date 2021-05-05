@@ -7,7 +7,6 @@ public class pedidoProduto {
 
     private static List<itens> produtos = new ArrayList<>();
 
-
     public List<itens> getProdutos() {
         return produtos;
     }
@@ -19,5 +18,4 @@ public class pedidoProduto {
     public void remContrato(itens produto) {
         produtos.remove(produto);
     }
-
 }
