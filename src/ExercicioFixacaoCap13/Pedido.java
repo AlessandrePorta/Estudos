@@ -27,12 +27,10 @@ public class Pedido {
         System.out.println("Entre os dados da ordem:");
         System.out.print("Status:");
         String status = sc.next();
-        Cliente cliente = new Cliente(nome, email, dataDeNascimento, statusOrdem.valueOf(status));
+        Ordem ordem = new Ordem(statusOrdem.valueOf(status), new Cliente(nome, email, dataDeNascimento));
 
-        System.out.println("Quantos itens terá o pedido?");
+        System.out.print("Quantos itens terá o pedido?");
         int n = sc.nextInt();
-
-        itens produto = null;
 
         for (int i = 0; i < n; i++){
             System.out.println("Entre com os dados do #"+ (i+1) +" item");
@@ -43,17 +41,11 @@ public class Pedido {
             Double preco = sc.nextDouble();
             System.out.print("Quantidade: ");
             Integer quantidade = sc.nextInt();
-            produto = new itens(nomeProduto, preco, quantidade);
-            pedidoProduto.addContrato(produto);
+            pedidoProduto dados = new pedidoProduto(quantidade, new itens(nomeProduto, preco));
+            ordem.addProdutos(dados);
         }
-
-        System.out.println("RESUMO DO PEDIDO:");
-        System.out.print("DATA: "+ sdf1.format(date)+ "\n");
-        System.out.print("Status do pedido: "+ status+ "\n");
-        System.out.print(cliente);
-        System.out.println("Itens do pedido:");
-        for(itens item : produto.getProdutos()){
-            System.out.println(item.toString());
-        }
+        System.out.println("Resumo do pedido:");
+        System.out.print("Data do pedido: "+ sdf1.format(date));
+        System.out.println(ordem.toString());
     }
 }

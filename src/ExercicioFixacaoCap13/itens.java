@@ -1,15 +1,16 @@
 package ExercicioFixacaoCap13;
 
-public class itens extends pedidoProduto {
+public class itens{
 
     private String nomeProduto;
     private Double preco;
-    private Integer quantidade;
 
-    public itens(String nomeProduto, Double preco, Integer quantidade) {
+    public itens() {
+    }
+
+    public itens(String nomeProduto, Double preco) {
         this.nomeProduto = nomeProduto;
         this.preco = preco;
-        this.quantidade = quantidade;
     }
 
     public String getNomeProduto() {
@@ -27,22 +28,4 @@ public class itens extends pedidoProduto {
     public void setPreco(Double preco) {
         this.preco = preco;
     }
-
-    public Integer getQuantidade() {
-        return quantidade;
-    }
-
-    public void setQuantidade(Integer quantidade) {
-        this.quantidade = quantidade;
-    }
-
-    public String total(){
-        double total1 = preco;
-        for (int i = 0; i<quantidade; i++){
-            total1 += preco;
-        }
-        return "Subtotal: " + total1;
-    }
-
-
 }

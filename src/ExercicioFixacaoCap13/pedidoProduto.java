@@ -1,21 +1,32 @@
 package ExercicioFixacaoCap13;
 
-import java.util.ArrayList;
-import java.util.List;
-
 public class pedidoProduto {
 
-    private static List<itens> produtos = new ArrayList<>();
+    private Integer quantidade;
+    private itens produto;
 
-    public List<itens> getProdutos() {
-        return produtos;
+    public pedidoProduto(Integer quantidade) {
+        this.quantidade = quantidade;
     }
 
-    public static void addContrato(itens produto) {
-        produtos.add(produto);
+    public pedidoProduto(Integer quantidade,itens produto) {
+        this.quantidade = quantidade;
+        this.produto = produto;
     }
 
-    public void remContrato(itens produto) {
-        produtos.remove(produto);
+    public Integer getQuantity() {
+        return quantidade;
+    }
+
+    public void setQuantity(Integer quantity) {
+        this.quantidade = quantity;
+    }
+
+    public itens getProduto() {
+        return produto;
+    }
+
+    public Double subTotal(){
+        return quantidade * produto.getPreco();
     }
 }
