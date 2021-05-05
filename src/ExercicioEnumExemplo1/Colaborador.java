@@ -11,7 +11,7 @@ public class Colaborador {
     private Double salarioBase;
 
     private Departamento departamento;
-    private List<ContratoPorHora> contratos = new ArrayList<>();
+    private List<ContratoPorHora> contracts = new ArrayList<>();
 
     public Colaborador() {
     }
@@ -55,22 +55,22 @@ public class Colaborador {
         this.departamento = departamento;
     }
 
-    public List<ContratoPorHora> getContratos() {
-        return contratos;
+    public List<ContratoPorHora> getContracts() {
+        return contracts;
     }
 
     public void addContrato(ContratoPorHora contrato) {
-        contratos.add(contrato);
+        contracts.add(contrato);
     }
 
     public void remContrato(ContratoPorHora contrato) {
-        contratos.remove(contrato);
+        contracts.remove(contrato);
     }
 
     public double totalSalario(int ano, int mes) {
         double soma = salarioBase;
         Calendar cal = Calendar.getInstance();
-        for (ContratoPorHora c : contratos) {
+        for (ContratoPorHora c : contracts) {
             cal.setTime(c.getData());
             int c_ano = cal.get(Calendar.YEAR);
             int c_mes = 1 + cal.get(Calendar.MONTH);
