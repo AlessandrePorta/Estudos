@@ -12,7 +12,7 @@ public class Data {
         SimpleDateFormat d1 = new SimpleDateFormat("dd/MM/yyyy");
         SimpleDateFormat d2 = new SimpleDateFormat("dd/MM/yyyy HH:mm:ss");
         SimpleDateFormat d3 = new SimpleDateFormat("dd/MM/yyyy HH:mm:ss");
-        d3.setTimeZone(TimeZone.getTimeZone("GMT"));
+        d3.setTimeZone(TimeZone.getTimeZone("GMT-3"));
 
         Date x1 = d1.parse("25/06/2018");
         Date x2 = d2.parse("25/06/2018 15:42:07");
