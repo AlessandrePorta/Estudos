@@ -22,4 +22,10 @@ public class ContaEmpresarial extends Conta {
             saldo += quantidade -10.0;
         }
     }
+
+    @Override
+    public void saque(double quantidade){
+        super.saque(quantidade);
+        saldo -= 2.0;
+    }
 }

@@ -22,4 +22,9 @@ public class Poupança extends Conta {
     public void atualizarSaldo(){
         saldo += (saldo * taxaDeInteresse);
     }
+
+    @Override
+    public void saque(double quantidade){
+        saldo -= quantidade;
+    }
 }
