@@ -1,6 +1,6 @@
 package Herança;
 
-public class Poupança extends Conta {
+public final class Poupança extends Conta {
 
     private Double taxaDeInteresse;
 
@@ -24,7 +24,7 @@ public class Poupança extends Conta {
     }
 
     @Override
-    public void saque(double quantidade){
+    public final void saque(double quantidade){
         saldo -= quantidade;
     }
 }
