@@ -1,45 +1,47 @@
 package ExercicioFixacaoCap14;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Locale;
-import java.util.Scanner;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.*;
 
 public class Programa {
-
-    public static void main(String[] args) {
+    public static void main(String[] args) throws ParseException {
 
         Locale.setDefault(Locale.US);
         Scanner sc = new Scanner(System.in);
+        SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
 
-        List<Empregado> lista = new ArrayList<>();
+        List<Produto> lista = new ArrayList<>();
 
-        System.out.print("Digite o número de funcionarios:");
+        System.out.print("Digite o numero de produtos: ");
         int n = sc.nextInt();
 
         for (int i = 1; i <= n; i++) {
-            System.out.println("Dados do funcionario número #"+n+":");
-            System.out.print("Terceirizado? (y/n) ");
+            System.out.println("Dados do produto: " + i);
+            System.out.print("Produto comum, usado ou importado? (c/u/i): ");
             char ch = sc.next().charAt(0);
             System.out.print("Nome: ");
             sc.nextLine();
             String nome = sc.nextLine();
-            System.out.print("Horas: ");
-            int horas = sc.nextInt();
-            System.out.print("Valor por hora: ");
-            double valorPorHora = sc.nextDouble();
-            if (ch == 'y'){
-                System.out.print("Pagamento adicional: ");
-                double pagamentoAdicional = sc.nextDouble();
-                lista.add(new EmpregadoTerceirizado(nome, horas, valorPorHora, pagamentoAdicional));
-            }else{
-                lista.add(new Empregado(nome, horas, valorPorHora));
+            System.out.print("Preço: ");
+            Double preco = sc.nextDouble();
+            if (ch == 'c') {
+                lista.add(new Produto(nome, preco));
+            }
+            if (ch == 'u') {
+                System.out.print("Digite a data de faturamento: ");
+                Date dataDeFaturamento = sdf.parse(sc.next());
+                lista.add(new ProdutoUsado(nome, preco, dataDeFaturamento));
+            }
+            if (ch == 'i') {
+                System.out.print("Taxa de importação: ");
+                Double taxa = sc.nextDouble();
+                lista.add(new ProdutoImportado(nome, preco, taxa));
             }
         }
-        System.out.println();
-        System.out.println("PAGAMENTOS:");
-        for(Empregado emp : lista){
-            System.out.println(emp.getNome()+ " - $"+ String.format("%.2f", emp.pagamento()));
+        System.out.println("DADOS DOS PRODUTOS: ");
+        for (Produto prod : lista) {
+            System.out.println(prod.etiquetaDePreco());
         }
     }
 }

@@ -1,4 +1,4 @@
-package ExercicioFixacaoCap14;
+package ExercicioResolvidoCap14;
 
 public class EmpregadoTerceirizado extends Empregado{
 
