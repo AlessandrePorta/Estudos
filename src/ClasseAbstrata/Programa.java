@@ -13,5 +13,19 @@ public class Programa {
         lista.add(new Poupança(1004, "Alex", 300.0, 0.01));
         lista.add(new ContaEmpresarial(1005, "Ana", 500.0, 500.0));
 
+        double soma = 0.0;
+
+        for (Conta conta: lista){
+            soma += conta.getSaldo();
+        }
+
+        System.out.printf("Saldo total: %.2f%n", soma);
+
+        for (Conta conta : lista){
+            conta.deposito(10.0);
+        }
+        for (Conta conta : lista){
+            System.out.printf("Saldo atualizado para a conta%d: %.2f%n", conta.getNumero(), conta.getSaldo());
+        }
     }
 }
