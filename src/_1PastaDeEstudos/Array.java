@@ -17,4 +17,3 @@ public class Array {
         System.out.println(lista);
     }
 }
-a
