@@ -20,7 +20,8 @@ public class FileReaderEBufferedReader {
                 System.out.println(line);
                 line = bfr.readLine();
             }
-        } catch (IOException e) {
+        }
+        catch (IOException e) {
             System.out.println("Erro: " + e.getMessage());
         }
         finally{
