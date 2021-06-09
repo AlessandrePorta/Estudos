@@ -1,6 +1,8 @@
 package ExercicioFixacaoCap17;
 
 import java.io.*;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Locale;
 import java.util.Scanner;
 
@@ -10,21 +12,36 @@ public class Program {
         Scanner sc = new Scanner(System.in);
         Locale.setDefault(Locale.US);
 
+        List<Products> lista = new ArrayList<>();
+
         System.out.println("Digite o caminho da pasta: ");
         String scPath = sc.nextLine();
 
-        boolean sucesso = new File(scPath +"\\out").mkdir();
-        System.out.println("Pasta criada com sucesso");
+        File arquivo = new File(scPath);
+        String procurandoArquivo = arquivo.getParent();
 
-        try (BufferedWriter bw = new BufferedWriter(new FileWriter("C:\\Users\\alessandrejunior-sgk\\Desktop\\out\\summary.csv"))){
-            String[] summary = new String[]{"TV LED, \n1290.99, \n1\nVideo Game Chair, \n350.50, \n3\nIphone X, \n900.00, \n2\nSamsung Galaxy 9, \n850.00, \n2"};
-            File path = new File("C:\\Users\\alessandrejunior-sgk\\Desktop\\out\\summary.csv");
-            for (String i : summary){
-                bw.write(i);
-                bw.newLine();
+        boolean sucesso = new File(procurandoArquivo +"\\out").mkdir();
+        String arquivoCsv = scPath + "\\out\\summary.csv";
+
+
+        try (BufferedReader br = new BufferedReader(new FileReader(scPath))){
+
+            String produto = br.readLine();
+            while(produto != null){
+                String[] campos = produto.split(",");
+                String nome = campos[0];
+                double preco = Double.parseDouble(campos[1]);
+                int quantidade = Integer.parseInt(campos[2]);
+
+                lista.add(new Products(nome, preco, quantidade));
+
+                produto = br.readLine();
+
             }
-
-            while
+            for(Products i : lista){
+                System.out.println(i.getNome() + String.format("%.2f", i.total()));
+                System.out.println();
+            }
         }catch(IOException e){
             e.printStackTrace();
         }
