@@ -16,9 +16,9 @@ public class CaminhoDoArquivo {
         //Apenas o arquivo
         System.out.println("getName: "+ path.getName());
         //Apenas o caminho
-        System.out.println("getParent: "+path.getParent());
+        System.out.println("getParent: "+ path.getParent());
         //Caminho com o arquivo
-        System.out.println("getPath: "+path.getPath());
+        System.out.println("getPath: "+ path.getPath());
 
         sc.close();
     }

@@ -15,6 +15,7 @@ public class FileWriterEBufferedWriter {
             for (String line : lines) {
                 bw.write(line);
                 bw.newLine();
+                System.out.println(line);
             }
 
         } catch (IOException e) {
