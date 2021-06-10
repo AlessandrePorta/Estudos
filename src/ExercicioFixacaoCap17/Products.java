@@ -39,4 +39,5 @@ public class Products {
     public double total(){
         return preco * quantidade;
     }
+
 }

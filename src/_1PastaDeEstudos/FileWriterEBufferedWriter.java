@@ -9,7 +9,7 @@ public class FileWriterEBufferedWriter {
 
         String[] lines = new String[]{"Bom dia, Boa tarde e boa noite"};
 
-        String path = "C:\\Users\\alessandrejunior-sgk\\Desktop\\out.txt";
+        String path = "C:\\Users\\Ale\\Desktop\\out.txt";
 
         try (BufferedWriter bw = new BufferedWriter(new FileWriter(path, true))) {
             for (String line : lines) {
@@ -17,7 +17,6 @@ public class FileWriterEBufferedWriter {
                 bw.newLine();
                 System.out.println(line);
             }
-
         } catch (IOException e) {
             e.printStackTrace();
         }
