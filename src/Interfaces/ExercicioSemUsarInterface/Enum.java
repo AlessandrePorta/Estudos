@@ -1,4 +1,4 @@
-package Interfaces;
+package Interfaces.ExercicioSemUsarInterface;
 
 public enum Enum {
 
