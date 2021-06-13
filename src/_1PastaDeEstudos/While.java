@@ -16,7 +16,7 @@ public class While {
 
             while (x < y) {
                 x += 1;
-                System.out.println("PrimeiroProblemaCap8" + x);
+                System.out.println("Exercicios/PrimeiroProblemaCap8" + x);
             }
         }
 
