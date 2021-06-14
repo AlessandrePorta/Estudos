@@ -1,7 +1,6 @@
 package Generics.Introduce.Application;
 
 import Generics.Introduce.Services.PrintService;
-import Generics.Introduce.Services.PrintServiceString;
 
 import java.util.Locale;
 import java.util.Scanner;
