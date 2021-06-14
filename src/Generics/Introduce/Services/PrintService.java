@@ -1,7 +1,5 @@
 package Generics.Introduce.Services;
 
-import Generics.Introduce.Application.Application;
-
 import java.util.ArrayList;
 import java.util.List;
 
