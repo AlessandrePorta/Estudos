@@ -2,6 +2,7 @@ package Generics.Set.Introducao.Application;
 
 import java.util.LinkedHashSet;
 import java.util.Set;
+import java.util.TreeSet;
 
 public class Application {
     public static void main(String[] args) {
@@ -9,7 +10,7 @@ public class Application {
         //HashSet mais rapido porém sem ordem
         //TreeSet mais demorado porém ordenado
         //LinkedHashSet mantém a ordem do que foi adicionado
-        Set<String> set = new LinkedHashSet<>();
+        Set<String> set = new TreeSet<>();
 
         set.add("TV");
         set.add("Notebook");
