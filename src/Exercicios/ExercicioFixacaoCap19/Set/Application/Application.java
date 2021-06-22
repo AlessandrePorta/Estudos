@@ -1,6 +1,6 @@
-package Exercicios.ExercicioFixacaoCap19.Application;
+package Exercicios.ExercicioFixacaoCap19.Set.Application;
 
-import Exercicios.ExercicioFixacaoCap19.Entities.Alunos;
+import Exercicios.ExercicioFixacaoCap19.Set.Entities.Alunos;
 
 import java.io.*;
 import java.util.*;

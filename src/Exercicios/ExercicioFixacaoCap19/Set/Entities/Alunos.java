@@ -1,4 +1,4 @@
-package Exercicios.ExercicioFixacaoCap19.Entities;
+package Exercicios.ExercicioFixacaoCap19.Set.Entities;
 
 import java.util.Objects;
 
